@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Crafty Grill</title>
+</head>
+
+<body>
+    <header class="head">
+        <h1 class="logo">Food
+            <i class=" fas fa-truck"></i>Truck</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="index1.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn" onclick="location.href='login.html';">Order Online</button>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+    <a href="#home">
+        <div id="scroll"><i class="fas fa-angle-up"></i></div>
+    </a>
+    <!------------------------home section----------------------------->
+    <section id="home" class="home">
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <img src="slide-1.jpg" alt="">
+                    <div class="content">
+                        
+                        <h1 >The Yummy Food Truck</h1>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="slide-2.jpg" alt="">
+                    <div class="content">
+                        <h1>We Create Delicious Food With Great Passion</h1>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="slide-3.jpg" alt="">
+                    <div class="content">
+                        <h1>Extent Incredible Services & Event Catering</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------Menu Section--------------------------->
+    <section class="menu">
+        <img src="im.png" alt="">
+        <h1>View Our Menu, Organize Your Future Event or Order Online in a Few Click</h1>
+        <div class="container">
+            <div class="inner-container">
+                <img src="item-1.jpg" alt="">
+                <h2>Check Our Dishes</h2>
+            </div>
+            <div class="inner-container">
+                <img src="item-2.jpg" alt="">
+                <h2>Catering Services</h2>
+            </div>
+            <div class="inner-container">
+                <img src="item-3.jpeg" alt="">
+                <h2>Online Ordering</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!------------------About---------------------------->
+    <section class="about">
+        <div class="container">
+            <div class="heading">
+                <button class="btn">Learn More</button>
+                <h2>Our Story</h2>
+                <h1>Yummy Food Truck</h1>
+            </div>
+            <div class="content">
+                <p>We’re the Yummy Food Truck, and we serve up delicious and fresh cuisine throughout Chennai. We always create a unique menu in easy-to-carry street food configurations, influenced by our customers as well as American, Asian and
+                    Mexican flavors. Moreover, we also have a seasonal menu which we create by using fresh, seasonal ingredients from local farms. We provide truck catering services for any type of event, big or small, including weddings, corporate events,
+                    community events, reunions, birthday parties, and others. Having our food truck at your event is a great experience and we will discuss all the details out with you to make sure you have an unforgettable time.</p>
+            </div>
+            <div class="image">
+                <img src="im1.jpg" alt="">
+                <img src="im2.jpg" alt="">
+                <img src="im3.jpg" alt="">
+                <img src="im4.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------Dishes Section--------------------------->
+    <section class="menu">
+        <img src="im.png" alt="">
+        <h1>Check Our Newest Dishes</h1>
+        <table>
+            <tr>
+                <td rowspan="3"><img src="im1.jpg" width="100%" height="120%">
+                    <span>Ricotta-Stuffed French Toast - Rs.425</span>
+                    <p>RICOTTA CHEESE, CHALLAH BREAD, FRESH BERRIES, HEAVY CREAM</p>
+                </td>
+                <td><img src="im2.jpg">
+                    <br>
+                    <span>Chicken Zinger Burger - RS.180</span>
+                    <p> CHEESE, CHALLAH BREAD, FRESH BERRIES, HEAVY CREAM</p>
+                    <br><br>
+                </td>
+            </tr>
+            <tr>
+
+                <td rowspan="2"><img src="im3.jpg">
+                    <br>
+                    <span>Mexican Tacos - Rs.245</span>
+                    <p>RICOTTA CHEESE, CHALLAH BREAD, FRESH BERRIES, HEAVY CREAM</p>
+                </td>
+            </tr>
+
+        </table>
+        </div>
+    </section>
+</body>
+<script>
+    let menu = document.querySelector('#menu-bar');
+    let head = document.querySelector('.head .navbar');
+
+    menu.onclick = () => {
+        head.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+        head.classList.remove('active');
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll').classList.add('active');
+        } else {
+            document.querySelector('#scroll').classList.remove('active');
+        }
+    };
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+    <!---------Footer----->
+<section class="footer">
+
+    <h3>About Us</h3>
+  <p>This food truck has a large, thriving social media audience across all the major social networks,<br> including Facebook, Twitter, Instagram, as well as YouTube.</p>
+    <div class="icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/KasinaYukta?t=5pZNjWIRU4ctZrf8s1sGGA&s=09" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/hemalatha-t-104360234/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/invites/contact/?i=8au9hpkwhmug&utm_content=i73qe7y" class="fa fa-instagram"></a>
+        
+    </div>
+    <div class="rec">
+    <p>Made with<i class="fa fa-heart-o"></i>Crafty Grill Admins</p>
+</section>
+
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Crafty Grill</title>
+</head>
+
+<body>
+    <header class="head">
+        <h1 class="logo">Food
+            <i class=" fas fa-truck"></i>Truck</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="index1.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn">Order Online</button>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+      <a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });" >
+        
+        <div id="scroll"><i class="fas fa-angle-up"></i></div>
+    </a>
+    <!--------------------- contact us ----------------------------->
+<section class="subabout-header">
+    <h1>About Us</h1>
+</section>
+
+
+<section>
+    <h1 style="font-size:40px">Get to know us!</h1>
+    <p style="padding-top:25px; font-size:25px">We’re The Crafty Grill, A Food Truck Based In Chennai.Yummy Food Truck Is All About Good And Extremely Delicious American, Asian And Mexican Comfort Food, And The Food And Services We Provide You With Would Leave You Wanting Nothing But More From Us. We Aim To Provide Our Customers With Easier Means Of Ordering Food From Us But At The Comfort Of Their Own Home. Through Our Website You Can Track Where The Food Truck Is At Any Given Instance, Right From Where It Is Located Till When You Will Be Delivered Your Delicious Orders All At The Earliest. Whether You Are Having A Small Gathering Or A 200 Person Party, Crafty Grill Can Meet Your Catering And Event Planning Needs. Food Truck Dining Is Always Fresh, Delicious & Fun.. Not To Mention Crowd Pleasing & Memorable For All Of Your Guests. <br><br>
+This Website Was Developed By 3 B.Tech Students Hemalatha.T, Yukta Kasina, Srishti Singh From SRM Institute Of Science And Technology, Kattankulathur. With This Website We Aim To Provide The Customers With An Easier Means Of Dining Right From Their Homes.</p>
+</section>
+
+<section class="menu">
+        <img src="im.png" alt="">
+        <div class="container">
+            <div class="inner-container">
+                <img src="food 4.jpeg" alt="">
+            </div>
+            <div class="inner-container">
+                <img src="food 5.jpeg" alt="">
+            </div>
+            <div class="inner-container">
+                <img src="food 6.jpeg" alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+
+<script>
+    let menu = document.querySelector('#menu-bar');
+    let head = document.querySelector('.head .navbar');
+
+    menu.onclick = () => {
+        head.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+        head.classList.remove('active');
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll').classList.add('active');
+        } else {
+            document.querySelector('#scroll').classList.remove('active');
+        }
+    };
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+        <!---------Footer----->
+<section class="footer">
+
+    <h3>Still having any query?</h3>
+  <p>Drop us a line on</p>
+    <div class="icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/KasinaYukta?t=5pZNjWIRU4ctZrf8s1sGGA&s=09" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/hemalatha-t-104360234/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/invites/contact/?i=8au9hpkwhmug&utm_content=i73qe7y" class="fa fa-instagram"></a>
+        
+    </div>
+    <div class="rec">
+    <p>Made with<i class="fa fa-heart-o"></i>by Admins</p>
+</section>
+
+
+</html>

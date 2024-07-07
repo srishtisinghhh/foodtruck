@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Crafty Grill</title>
+</head>
+
+<body>
+    <header class="head">
+        <h1 class="logo">Food
+            <i class=" fas fa-truck"></i>Truck</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="index1.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn" onclick="location.href='login.html';">Order Online</button>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+   
+    <a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });" >
+        
+        <div id="scroll"><i class="fas fa-angle-up"></i></div>
+    </a>
+    <!--------------------- contact us ----------------------------->
+<section class="subb-header">
+    <h1>Service</h1>
+</section>
+
+
+<section class="menu">
+        <img src="im.png" alt="">
+        <div class="container">
+            <div class="inner-container">
+                <img src="onlineOrder.jpg" alt="">
+                <h2>Online Ordering</h2>
+            </div>
+            <div class="inner-container">
+                <img src="item-2.jpg" alt="">
+                <h2>Catering Services</h2>
+            </div>
+            <div class="inner-container">
+                <img src="onlineDelivery.jpg" alt="">
+                <h2>24/7 Delivery</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+<section class="contact-us">
+    <h1 style="padding-left:30px;padding-bottom: 30px ; font-size:40px">Locations</h1>
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-map-marker" style="font-size: 36px"></i>
+                <span>
+                    <h5> SH 49, Muttukadu</h5>
+                    <p>Chennai, Tamilnadu, IN</p>
+                </span>
+            </div>
+             <div>
+                <i class="fa fa-map-marker" style="font-size: 36px"></i>
+                <span>
+                    <h5> Elliots Beach, Besant Nagar</h5>
+                    <p>Chennai, Tamilnadu, IN</p>
+                </span>
+            </div>
+             <div>
+                <i class="fa fa-map-marker" style="font-size: 36px"></i>
+                <span>
+                    <h5> Pantheon Road, Egmore</h5>
+                    <p>Chennai, Tamilnadu, IN</p>
+                </span>
+            </div>
+        </div>
+        <div class="map">
+    <iframe src="https://www.google.com/maps/d/embed?mid=zSBQ9S8FVmoU.konJEEaHsSPU" width="940" height="390"></iframe>
+
+  </div>
+</section>
+<script>
+    let menu = document.querySelector('#menu-bar');
+    let head = document.querySelector('.head .navbar');
+
+    menu.onclick = () => {
+        head.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+        head.classList.remove('active');
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll').classList.add('active');
+        } else {
+            document.querySelector('#scroll').classList.remove('active');
+        }
+    };
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+        <!---------Footer----->
+<section class="footer">
+
+    <h3>Still having any query?</h3>
+  <p>Drop us a line on</p>
+    <div class="icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/KasinaYukta?t=5pZNjWIRU4ctZrf8s1sGGA&s=09" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/hemalatha-t-104360234/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/invites/contact/?i=8au9hpkwhmug&utm_content=i73qe7y" class="fa fa-instagram"></a>
+        
+    </div>
+    <div class="rec">
+    <p>Made with<i class="fa fa-heart-o"></i>by Admins</p>
+</section>
+
+
+</html>

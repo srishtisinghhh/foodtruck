@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+:root {
+    --clr1: limegreen;
+    --clr2: #fff;
+    --clr3: #000;
+    --clr4: #eee;
+    --clr5: crimson;
+    --box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 9rem 5%;
+}
+
+html {
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--clr1);
+}
+
+
+/*-----------------------------scrollbar----------------*/
+
+#scroll {
+    position: fixed;
+    display: none;
+    top: 90%;
+    right: 2rem;
+    padding: .5rem 1rem;
+    font-size: 3rem;
+    background: var(--clr1);
+    color: var(--clr2);
+    border-radius: .5rem;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+#scroll.active {
+    display: block;
+}
+
+
+/*-----------------------home section------------*/
+
+.head {
+    position: sticky;
+    background: var(--clr2);
+    border-bottom: .5rem solid var(--clr1);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.head .logo {
+    font-size: 3rem;
+    line-height: 2rem;
+    color: var(--clr3);
+    letter-spacing: .1rem;
+}
+
+.navbar a {
+    color: var(--clr3);
+    font-size: 1.8rem;
+    padding: 0 2rem;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--clr1);
+    transition: 1s ease;
+}
+
+#menu-bar {
+    font-size: 1.8rem;
+    color: var(--clr3);
+    display: none;
+    cursor: pointer;
+
+}
+
+.btn {
+    padding: 1.2rem;
+    width: 15rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    background: var(--clr1);
+    color: var(--clr2);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--clr3);
+    transition: .5s ease-in;
+}
+
+.title {
+    padding: 2.5rem 0;
+    text-align: center;
+    color: var(--clr1);
+    font-size: 3.5rem;
+    letter-spacing: .1rem;
+}
+
+.title span {
+    color: var(--clr5);
+}
+
+
+/*---------------------------home section----------------*/
+
+.home {
+    padding: 0;
+}
+
+.home .slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .slide img {
+    height: 50rem;
+    width: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    object-fit: cover;
+}
+
+.home .slide .content {
+    position: absolute;
+    width: 80rem;
+}
+
+.home .slide .content h1 {
+    font-size: 7rem;
+    color: var(--clr4);
+    line-height: 7rem;
+    animation: animate 2s ease infinite;
+}
+
+
+/*-----------------menu---------------------*/
+
+.menu {
+    text-align: center;
+}
+
+.menu h1 {
+    padding: 1rem 0;
+    font-size: 5rem;
+}
+
+.menu .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, .5fr));
+    grid-gap: 2rem;
+}
+
+.menu .container .inner-container {
+    margin: 1.5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.menu .container .inner-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu .container .inner-container h2 {
+    position: relative;
+    cursor: pointer;
+    background: var(--clr4);
+    padding: 1rem 0;
+    color: var(--clr3);
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+}
+
+
+/*----------------------------------chef Section----------------*/
+
+.about {
+    background: var(--clr3);
+}
+
+.about .container .heading h2 {
+    width: 8rem;
+    padding: 1rem;
+    color: var(--clr3);
+    background: var(--clr4);
+    font-size: 1.5rem;
+}
+
+.about .container .heading h1 {
+    padding: 1rem 0;
+    color: var(--clr2);
+    font-size: 5rem;
+}
+
+.about .container .heading .btn {
+    float: right;
+}
+
+.about .container .content p {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: var(--clr2);
+}
+
+.about .image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+}
+
+.about .image img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*-------------------------------------contact----------------*/
+
+.contact .container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.contact .container .image {
+    flex: 1 1 30rem;
+}
+
+.contact .container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .7;
+}
+
+.contact .container .box {
+    flex: 1 1 30rem;
+}
+
+.contact .container .box input,
+.contact .container .box textarea {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: .1rem solid var(--clr1);
+    resize: none;
+}
+
+.contact .container .box input:focus,
+.contact .container .box textarea:focus {
+    background: var(--clr1);
+    border: none;
+}
+
+.contact .container .box input:focus::placeholder,
+.contact .container .box textarea:focus::placeholder {
+    color: var(--clr2);
+}
+
+.contact .container button {
+    border: .1rem solid var(--clr1);
+}
+
+
+/*------------------------------------footer--------------------*/
+
+footer {
+    margin-top: 10rem;
+    padding: 10rem 5rem;
+    background: var(--clr4);
+    color: var(--clr1);
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+}
+
+footer .container .b-container h2 {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+footer .container .b-container .fas {
+    font-size: 1.5rem;
+    padding-right: .5rem;
+}
+
+footer .container .b-container a {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--clr1);
+}
+
+footer .container .b-container a:hover {
+    transform: translateX(1rem);
+    transition: .5s ease;
+}
+
+footer .container .b-container .social i {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--clr1);
+    color: var(--clr2);
+    font-size: 1.8rem;
+    border-radius: 5rem;
+}
+
+footer .container .b-container .social i:hover {
+    transform: translateY(-.5rem);
+    transition: .5s ease;
+}
+
+footer .container .b-container p {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    width: 25rem;
+    line-height: 2rem;
+}
+
+footer .container .b-container input {
+    width: 100%;
+    border: .1rem solid var(--clr1);
+    border-radius: .5rem;
+    padding: .5rem 0;
+    margin-top: 1rem;
+}
+
+footer .container .b-container button {
+    margin-top: 1rem;
+    border: .1rem solid var(--clr1);
+}
+
+footer .container .b-container .payment img {
+    margin-top: 1rem;
+    height: 3rem;
+}
+
+.copyright {
+    padding: 2rem 0;
+    text-align: center;
+    background: var(--clr1);
+    color: var(--clr2);
+    font-size: 1.5rem;
+}
+
+
+/*------------------------------media Query---------------------*/
+
+@media(max-width:991px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media(max-width:768px) {
+    .head .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--clr5);
+        padding: 2rem;
+        transition: .5s ease-in;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    }
+    .head .navbar.active {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .head .navbar a {
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+    .head .navbar a:hover {
+        color: var(--clr4);
+        transform: translateX(1rem);
+    }
+    #menu-bar {
+        display: block;
+    }
+    .home .slide .content h1 {
+        font-size: 3rem;
+        
+
+    }
+    .contact .container {
+        display: block;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+/*--------footer-----*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.footer p{
+    font-size: 14px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin-right: 10px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  margin-right: 10px;
+
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  margin-right: 10px;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.fa-heart-o{
+    color: #f44336;
+
+}
+/*------------------------------Contact Us---------------------*/
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+.sub-header{
+    height: 55vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(contact.jpg);
+    background-position: center;
+    background-size: autos;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 60px;
+    font-size: 50px;
+}
+.subabout-header{
+    height: 55vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(about.jpg);
+    background-position: center;
+    background-size: autos;
+    text-align: center;
+    color: #fff;
+}
+.subabout-header h1{
+    margin-top: 60px;
+    font-size: 50px;
+}
+.subb-header{
+    height: 55vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(services.jpg);
+    background-position: center;
+    background-size: autos;
+    text-align: center;
+    color: #fff;
+}
+.subb-header h1{
+    margin-top: 60px;
+    font-size: 50px;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 28px;
+    color: limegreen;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+    font-size: 15px;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
